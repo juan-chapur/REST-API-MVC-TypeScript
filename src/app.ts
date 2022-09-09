@@ -5,6 +5,7 @@ import { router } from "./routes";
 import dbConnect from "./config/mongo"
 
 const app = express();
+app.use(express.json())
 app.use(cors());
 app.use(router);
 
