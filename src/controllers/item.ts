@@ -1,6 +1,11 @@
 import { Response, Request } from "express";
 import {handleHttp} from "../utils/error.handle"
 import { insertCar, getCars, getCar, updateCar, deleteCar } from "../services/item";
+import { JwtPayload } from "jsonwebtoken";
+
+interface RequestExtended extends Request {
+    user?:string | JwtPayload;
+  }
 
 export const getItem = async (req: Request, res: Response) => {
     try {
@@ -12,10 +17,13 @@ export const getItem = async (req: Request, res: Response) => {
         handleHttp(res,"ERROR_GET_ITEM", error);
     }
 };
-export const getItems = async (req: Request, res: Response) => {
+export const getItems = async (req: RequestExtended, res: Response) => {
     try {
         const responseGet = await getCars();
-        res.send(responseGet);
+        res.send({
+            data: responseGet,
+            user: req.user
+        });
     } catch (error) {
         handleHttp(res,"ERROR_GET_ITEMS",error);
     }
