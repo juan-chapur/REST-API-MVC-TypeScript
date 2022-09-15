@@ -1,11 +1,7 @@
 import { Response, Request } from "express";
 import {handleHttp} from "../utils/error.handle"
 import { insertCar, getCars, getCar, updateCar, deleteCar } from "../services/item";
-import { JwtPayload } from "jsonwebtoken";
-
-interface RequestExtended extends Request {
-    user?:string | JwtPayload;
-  }
+import { RequestExtended } from "../interfaces/req-ext";
 
 export const getItem = async (req: Request, res: Response) => {
     try {
