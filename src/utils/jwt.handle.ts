@@ -1,8 +1,8 @@
 import { sign, verify } from "jsonwebtoken";
 import {JWT_SECRET} from "../config"
 
-export const generateToken = (email:string) => {
-  const jwt = sign({email}, <string>JWT_SECRET, {
+export const generateToken = (id:string) => {
+  const jwt = sign({id}, <string>JWT_SECRET, {
     expiresIn:"2h",
   });
   return jwt;
