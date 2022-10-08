@@ -2,7 +2,7 @@ import express from "express";
 import cors from "cors";
 import { PORT } from "./config";
 import { router } from "./routes";
-import dbConnect from "./config/mongo"
+import dbConnect from "./db/mongo"
 
 const app = express();
 app.use(express.json())
