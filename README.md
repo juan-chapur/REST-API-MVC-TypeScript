@@ -1,4 +1,20 @@
-# REST API TypeScript
+# REST API MVC TypeScript
+
+# Index
+* [Run Locally](#run-locally)
+* [Environment Variables](#environment-variables)
+* [Endpoints:](#endpoints)
+- **User Endpoints**
+  - [Register User](#register-user)
+  - [Login User](#login-user)
+- **Item Endpoints**
+  - [Get all items](#get-all-items)
+  - [Get item](#get-item)
+  - [Create item](#create-item)
+  - [Update item](#update-item)
+  - [Delete item](#delete-item)
+- **File Endpoint**
+  - [Upload File](#upload-file)
 
 ## Run Locally
 Clone the project
@@ -18,8 +34,16 @@ Start the server
   npm run dev
 ```
 
-# REST API
-# Register User
+## Environment Variables
+
+To run this project, you will need to add the following environment variables to your .env file (example in .env.example).
+
+`PORT`
+`DB_URI`
+`JWT_SECRET`
+
+## Endpoints
+## Register User
 **URL**: `/auth/register`
 **Method**: `POST`
 **Auth Required**: None
@@ -59,7 +83,7 @@ Start the server
 }
 ```
 
-# Login User
+## Login User
 **URL**: `/auth/login`
 **Method**: `POST`
 **Auth Required**: None
@@ -100,7 +124,8 @@ Start the server
     }
 }
 ```
-# Get all items
+
+## Get all items
 **URL**: `/item`
 **Method**: `GET`
 **Auth Required**: Yes (Session token)
@@ -157,7 +182,7 @@ Start the server
 }
 ```
 
-# Get item
+## Get item
 **URL**: `/item/:id`
 **Method**: `GET`
 **Auth Required**: None
@@ -192,7 +217,7 @@ Start the server
 }
 ```
 
-# Create item
+## Create item
 **URL**: `/item`
 **Method**: `POST`
 **Auth Required**: None
@@ -242,7 +267,7 @@ Start the server
 }
 ```
 
-# Update item
+## Update item
 **URL**: `/item/:id`
 **Method**: `PUT`
 **Auth Required**: None
@@ -291,7 +316,7 @@ Start the server
 }
 ```
 
-# Delete item
+## Delete item
 **URL**: `/item/:id`
 **Method**: `DELETE`
 **Auth Required**: None
@@ -325,7 +350,7 @@ Start the server
 }
 ```
 
-# Upload file
+## Upload file
 **URL**: `/storage`
 **Method**: `POST`
 **Auth Required**: Yes (Session token)
