@@ -1,9 +1,23 @@
 # REST API TypeScript
 
-## Install
-    npm install
-## Run server
-    npm run dev
+## Run Locally
+Clone the project
+```bash
+  git clone https://github.com/juan-chapur/REST-API-DDD-TypeScript.git
+```
+Go to the project directory
+```bash
+  cd REST-API-DDD-TypeScript.git
+```
+Install dependencies
+```bash
+  npm install
+```
+Start the server
+```bash
+  npm run dev
+```
+
 # REST API
 # Register User
 **URL**: `/auth/register`
@@ -15,7 +29,7 @@
 - **password** `string` *required*
 - **name** `string` *required*
 ### Body Example
-```
+```json
 {
   "email": "juan@juan.com",
   "password": "1234",
@@ -33,7 +47,7 @@
 - **createdAt** `string`
 - **updatedAt** `string`
 ### Response Example
-```
+```json
 {
     "name": "juan",
     "description": "Please write a description",
@@ -54,7 +68,7 @@
 - **email** `string` *required*
 - **password** `string` *required*
 ### Body Example
-```
+```json
 {
   "email": "juan@juan.com",
   "password": "1234"
@@ -72,7 +86,7 @@
 	- **createdAt** `string`
 	- **updatedAt** `string`
 ### Response Example
-```
+```json
 {
     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Imp1YW5AanVhbi5jb20iLCJpYXQiOjE2NjUxOTA3NzEsImV4cCI6MTY2NTE5Nzk3MX0.LtXGmYVv7ImB1DmBhbtFmj7KlSa7rsCAstBUWqwTGGc",
     "existUser": {
@@ -109,7 +123,7 @@
 	- **iat** `string`
 	- **exp** `string`
 ### Response Example
-```
+```json
 {
     "data": [
         {
@@ -164,7 +178,7 @@
 - **updatedAt** `string`
 
 ### Response Example
-```
+```json
 {
     "_id": "631ac7113e5199a1fe6d063e",
     "name": "nombre 2",
@@ -191,7 +205,7 @@
 - **description** `string` *required*
 - **price** `number` *required*
 ### Body Example
-```
+```json
 {
 	"name":"Golf",
 	"color":"gris",
@@ -214,7 +228,7 @@
 - **createdAt** `string` *required*
 - **updatedAt** `string` *required*
 ### Response Example
-```
+```json
 {
     "name": "Golf",
     "color": "gris",
@@ -241,7 +255,7 @@
 - **description** `string` *required*
 - **price** `number` *required*
 ### Body Example
-```
+```json
 {
 	"name":"Golf",
 	"color":"Gris",
@@ -263,7 +277,7 @@
 - **createdAt** `string` *required*
 - **updatedAt** `string` *required*
 ### Response Example
-```
+```json
 {
     "_id": "6340d916ddd49bb35f3ff9a7",
     "name": "Golf",
@@ -297,7 +311,7 @@
 - **createdAt** `string` *required*
 - **updatedAt** `string` *required*
 ### Response Example
-```
+```json
 {
     "_id": "6340d916ddd49bb35f3ff9a7",
     "name": "Golf",
@@ -337,7 +351,7 @@
 - **createdAt** `string` *required*
 - **updatedAt** `string` *required*
 ### Response Example
-```
+```json
 {
     "fileName": "image-1665195282117.jpg",
     "idUser": "juan@juan.com",
